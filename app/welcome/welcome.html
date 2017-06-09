@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style type="text/css">
+        .space {
+            padding-right: 10px;
+            padding-bottom: 6px;
+        }
+        
+        body {}
+    </style>
+</head>
+
+<body ng-app="EnoticeBoardWebApp">
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--scroll">
+            <div class="mdl-layout__header-row">
+                <!-- Title --><span class="mdl-layout-title">Title</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation"> <a class="mdl-navigation__link" href="#/blank">Blank</a> <a class="mdl-navigation__link" href="#/dashboard">Dashboard</a> <a class="mdl-navigation__link" href="#/temp">Temp</a> <a class="mdl-navigation__link" href="#/profile">Profile</a> <a class="mdl-navigation__link" href="#/addpost">Add Post</a> <a class="mdl-navigation__link" href="#/pending">Pending</a> <a class="mdl-navigation__link" href="#/viewuser">Viewuser</a> <a class="mdl-navigation__link" href="#/welcome">Home</a> <a class="mdl-navigation__link" href="#/newdocument">New Document</a> <a class="mdl-navigation__link" ng-click="logout()" href="#">Logout</a> </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer"> <span class="mdl-layout-title">E-Notice Web</span>
+            <nav class="mdl-navigation"> <a class="mdl-navigation__link" href=""><i class="material-icons space">home</i>Home</a> <a class="mdl-navigation__link" href="#/profile"><i class="material-icons space">account_circle</i>Profile</a> <a class="mdl-navigation__link" href="#/pending"><i class="material-icons space">watch_later</i>Pending Approval</a> <a class="mdl-navigation__link" href=""><i class="material-icons space">receipt</i>New Documents</a> <a class="mdl-navigation__link" href="#viewuser"><i class="material-icons space">supervisor_account</i>View Users</a> <a class="mdl-navigation__link" href=""><i class="material-icons space">account_balance</i>Other Department</a> <a class="mdl-navigation__link" ng-click="logout()" href=""><i class="material-icons space">exit_to_app</i>Logout</a> </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div ng-repeat="user in articles">
+                        <div class="w3-container">
+                            <h2>Card Example</h2>
+                            <div class="w3-card-4" style="width:70%">
+                                <header class="w3-container w3-light-grey">
+                                    <h3>{{user.username}}</h3> </header>
+                                <div class="w3-container">
+                                    <hr> <img width="100px" height="200px" src="{{user.images}}" alt="Avatar" style="width:60px">
+                                    <p>{{user.Desc}}</p>
+                                    <br> </div>
+                                <button class="w3-btn-block w3-dark-grey" ng-click="editPost(user.$id)">Delete coming</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

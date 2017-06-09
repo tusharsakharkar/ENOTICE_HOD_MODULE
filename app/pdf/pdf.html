@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- base href="http://rawgit.com/start-angular/SB-Admin-BS4-Angular-2/master/dist/prod/" -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to angular2-seed!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="pics/main.css">
+    <script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="css/img-upload.css" rel="stylesheet" type="text/css">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-indigo.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="dist/css/bootstrap-imageupload.css" rel="stylesheet">
+    <!-- endinject -->
+    <style>
+        .panel {
+            border: none;
+            border-radius: 2px;
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
+        }
+        
+        .panel-heading {
+            border-bottom: none
+        }
+        
+        .panel-footer {
+            border-top: none
+        }
+        
+        .popover {
+            border: none;
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
+        }
+        
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 37px;
+            padding: 6px 16px;
+            font-size: 13px;
+            line-height: 1.846;
+            color: #666666;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+        }
+        
+        textarea,
+        textarea.form-control,
+        input.form-control,
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=number],
+        [type=text].form-control,
+        [type=password].form-control,
+        [type=email].form-control,
+        [type=tel].form-control,
+        [contenteditable].form-control {
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            -webkit-appearance: none;
+            -webkit-box-shadow: inset 0 -1px 0 #ddd;
+            box-shadow: inset 0 -1px 0 #ddd;
+            font-size: 16px
+        }
+        
+        textarea:focus,
+        textarea.form-control:focus,
+        input.form-control:focus,
+        input[type=text]:focus,
+        input[type=password]:focus,
+        input[type=email]:focus,
+        input[type=number]:focus,
+        [type=text].form-control:focus,
+        [type=password].form-control:focus,
+        [type=email].form-control:focus,
+        [type=tel].form-control:focus,
+        [contenteditable].form-control:focus {
+            -webkit-box-shadow: inset 0 -2px 0 #2196f3;
+            box-shadow: inset 0 -2px 0 #2196f3
+        }
+        
+        textarea[disabled],
+        textarea.form-control[disabled],
+        input.form-control[disabled],
+        input[type=text][disabled],
+        input[type=password][disabled],
+        input[type=email][disabled],
+        input[type=number][disabled],
+        [type=text].form-control[disabled],
+        [type=password].form-control[disabled],
+        [type=email].form-control[disabled],
+        [type=tel].form-control[disabled],
+        [contenteditable].form-control[disabled],
+        textarea[readonly],
+        textarea.form-control[readonly],
+        input.form-control[readonly],
+        input[type=text][readonly],
+        input[type=password][readonly],
+        input[type=email][readonly],
+        input[type=number][readonly],
+        [type=text].form-control[readonly],
+        [type=password].form-control[readonly],
+        [type=email].form-control[readonly],
+        [type=tel].form-control[readonly],
+        [contenteditable].form-control[readonly] {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-bottom: 1px dotted #ddd
+        }
+        
+        textarea.input-sm,
+        textarea.form-control.input-sm,
+        input.form-control.input-sm,
+        input[type=text].input-sm,
+        input[type=password].input-sm,
+        input[type=email].input-sm,
+        input[type=number].input-sm,
+        [type=text].form-control.input-sm,
+        [type=password].form-control.input-sm,
+        [type=email].form-control.input-sm,
+        [type=tel].form-control.input-sm,
+        [contenteditable].form-control.input-sm {
+            font-size: 12px
+        }
+        
+        textarea.input-lg,
+        textarea.form-control.input-lg,
+        input.form-control.input-lg,
+        input[type=text].input-lg,
+        input[type=password].input-lg,
+        input[type=email].input-lg,
+        input[type=number].input-lg,
+        [type=text].form-control.input-lg,
+        [type=password].form-control.input-lg,
+        [type=email].form-control.input-lg,
+        [type=tel].form-control.input-lg,
+        [contenteditable].form-control.input-lg {
+            font-size: 17px
+        }
+    </style>
+    <style>
+        body[_ngcontent-ytd-11] {
+            -ms-overflow-x: hidden;
+            overflow-x: hidden
+        }
+        
+        .timeline[_ngcontent-ytd-11] {
+            position: relative;
+            padding: 20px 0;
+            list-style: none
+        }
+        
+        .timeline[_ngcontent-ytd-11]:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            margin-left: -1.5px;
+            background-color: #eee
+        }
+        
+        .timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11] {
+            position: relative;
+            margin-bottom: 20px
+        }
+        
+        .timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11]:after,
+        .timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11]:before {
+            content: " ";
+            display: table
+        }
+        
+        .timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11]:after {
+            clear: both
+        }
+        
+        .timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11] > .timeline-panel[_ngcontent-ytd-11] {
+            float: left;
+            position: relative;
+            width: 46%;
+            padding: 20px;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, .175)
+        }
+        
+        .timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11] > .timeline-panel[_ngcontent-ytd-11]:before {
+            content: " ";
+            display: inline-block;
+            position: absolute;
+            top: 26px;
+            right: -15px;
+            border-top: 15px solid transparent;
+            border-right: 0 solid #ccc;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid #ccc
+        }
+        
+        .timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11] > .timeline-panel[_ngcontent-ytd-11]:after {
+            content: " ";
+            display: inline-block;
+            position: absolute;
+            top: 27px;
+            right: -14px;
+            border-top: 14px solid transparent;
+            border-right: 0 solid #fff;
+            border-bottom: 14px solid transparent;
+            border-left: 14px solid #fff
+        }
+        
+        .timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11] > .timeline-badge[_ngcontent-ytd-11] {
+            z-index: 100;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            margin-left: -25px;
+            border-radius: 50% 50% 50% 50%;
+            text-align: center;
+            font-size: 1.4em;
+            line-height: 50px;
+            color: #fff;
+            background-color: #999
+        }
+        
+        .timeline[_ngcontent-ytd-11] > li.timeline-inverted[_ngcontent-ytd-11] > .timeline-panel[_ngcontent-ytd-11] {
+            float: right
+        }
+        
+        .timeline[_ngcontent-ytd-11] > li.timeline-inverted[_ngcontent-ytd-11] > .timeline-panel[_ngcontent-ytd-11]:before {
+            right: auto;
+            left: -15px;
+            border-right-width: 15px;
+            border-left-width: 0
+        }
+        
+        .timeline[_ngcontent-ytd-11] > li.timeline-inverted[_ngcontent-ytd-11] > .timeline-panel[_ngcontent-ytd-11]:after {
+            right: auto;
+            left: -14px;
+            border-right-width: 14px;
+            border-left-width: 0
+        }
+        
+        .timeline-badge.primary[_ngcontent-ytd-11] {
+            background-color: #2e6da4!important
+        }
+        
+        .timeline-badge.success[_ngcontent-ytd-11] {
+            background-color: #3f903f!important
+        }
+        
+        .timeline-badge.warning[_ngcontent-ytd-11] {
+            background-color: #f0ad4e!important
+        }
+        
+        .timeline-badge.danger[_ngcontent-ytd-11] {
+            background-color: #d9534f!important
+        }
+        
+        .timeline-badge.info[_ngcontent-ytd-11] {
+            background-color: #5bc0de!important
+        }
+        
+        .timeline-title[_ngcontent-ytd-11] {
+            margin-top: 0;
+            color: inherit
+        }
+        
+        .timeline-body[_ngcontent-ytd-11] > p[_ngcontent-ytd-11],
+        .timeline-body[_ngcontent-ytd-11] > ul[_ngcontent-ytd-11] {
+            margin-bottom: 0
+        }
+        
+        .timeline-body[_ngcontent-ytd-11] > p[_ngcontent-ytd-11] + p[_ngcontent-ytd-11] {
+            margin-top: 5px
+        }
+        
+        @media (max-width:767px) {
+            ul.timeline[_ngcontent-ytd-11]:before {
+                left: 40px
+            }
+            ul.timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11] > .timeline-panel[_ngcontent-ytd-11] {
+                width: calc(100% - 90px);
+                width: -webkit-calc(100% - 90px)
+            }
+            ul.timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11] > .timeline-badge[_ngcontent-ytd-11] {
+                top: 16px;
+                left: 15px;
+                margin-left: 0
+            }
+            ul.timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11] > .timeline-panel[_ngcontent-ytd-11] {
+                float: right
+            }
+            ul.timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11] > .timeline-panel[_ngcontent-ytd-11]:before {
+                right: auto;
+                left: -15px;
+                border-right-width: 15px;
+                border-left-width: 0
+            }
+            ul.timeline[_ngcontent-ytd-11] > li[_ngcontent-ytd-11] > .timeline-panel[_ngcontent-ytd-11]:after {
+                right: auto;
+                left: -14px;
+                border-right-width: 14px;
+                border-left-width: 0
+            }
+        }
+        
+        .texture {
+            background-color: #ffffff;
+            background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+        }
+        /*# sourceMappingURL=timeline.css.map */
+    </style>
+    <style>
+        .btn-outline {
+            background-color: whitesmoke;
+            color: inherit;
+            transition: all .5s;
+        }
+        
+        .btn-primary.btn-outline {
+            color: #428bca;
+        }
+        
+        .btn-success.btn-outline {
+            color: #5cb85c;
+        }
+        
+        .btn-upload.btn-outline {
+            color: cadetblue;
+        }
+        
+        .btn-clear.btn-outline {
+            color: olivedrab;
+        }
+        
+        .btn-post.btn-outline {
+            color: yellowgreen;
+        }
+        
+        .btn-info.btn-outline {
+            color: #5bc0de;
+        }
+        
+        .btn-warning.btn-outline {
+            color: #f0ad4e;
+        }
+        
+        .btn-danger.btn-outline {
+            color: #d9534f;
+        }
+        
+        .btn-primary.btn-outline:hover,
+        .btn-upload.btn-outline:hover,
+        .btn-clear.btn-outline:hover,
+        .btn-post.btn-outline:hover,
+        .btn-success.btn-outline:hover,
+        .btn-info.btn-outline:hover,
+        .btn-warning.btn-outline:hover,
+        .btn-danger.btn-outline:hover {
+            color: #fff;
+        }
+        
+        .back {
+            background-color: #222222;
+            background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+            /*
+                background: #283048;
+                background: -webkit-linear-gradient(to left, #283048 , #859398); 
+                background: linear-gradient(to left, #283048 , #859398); 
+           */
+        }
+        
+        .mback {
+            background-color: #989898;
+            background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
+        }
+        
+        .top-buffer {
+            margin-top: 80px;
+        }
+        
+        .top-buffer2 {
+            margin-top: 25px;
+            clear: left;
+            margin: 5px;
+            padding: 5px;
+        }
+        
+        .btn-upload:hover,
+        .btn-upload:active:hover {
+            background-color: cadetblue
+        }
+        
+        .btn-upload:active {
+            -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4)
+        }
+        
+        .btn-clear:hover,
+        .btn-clear:active:hover {
+            background-color: olivedrab
+        }
+        
+        .btn-clear:active {
+            -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4)
+        }
+        
+        .btn-post:hover,
+        .btn-post:active:hover {
+            background-color: yellowgreen
+        }
+        
+        .btn-post:active {
+            -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4)
+        }
+        
+        .texture {
+            background-color: #ffffff;
+            background-image: url("https://www.transparenttextures.com/patterns/climpek.png");
+        }
+        
+        .imageupload {
+            margin: 20px 0;
+        }
+        /*# sourceMappingURL=timeline.css.map */
+    </style>
+</head>
+
+<body>
+    <sd-app>
+        <router-outlet></router-outlet>
+        <dashboard-cmp>
+            <top-nav>
+                <nav class="navbar navbar-dark bg-inverse navbar-fixed-top topnav">
+                    <div class="collapse navbar-toggleable-xs clearfix text-center"> <a class="navbar-brand" href="#/dashboard">Enotice Board</a>
+                        <ul class="nav navbar-nav top-nav navbar-right pull-xs-right top-right-nav">
+                            <li class="nav-item buy-now"> <a class="btn btn-default-outline buy-now-btn" href="https://github.com/start-angular/SB-Admin-BS4-Angular-2/archive/master.zip" role="button" style="padding: .375rem 1rem !important; border-color: #999;">Download App</a> </li>
+                            <ul aria-labelledby="dropdownMenu4" class="dropdown-menu message-dropdown">
+                                <li class="message-preview">
+                                    <a class="dropdown-item" href="javascript:;">
+                                        <div class="media"> <span class="media-left">                                         <img alt="" class="media-object" src="pics/slide_461162_6224974_sq50.jpg">                                     </span>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><strong></strong>                                         </h5>
+                                                <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                                <p class="last"> Lorem ipsum dolor sit amet, consectetur...</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr>
+                                <li class="message-preview">
+                                    <a class="dropdown-item" href="javascript:;">
+                                        <div class="media"> <span class="media-left">                                         <img alt="" class="media-object" src="pics/slide_461162_6224974_sq50.jpg">                                     </span>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><strong>John Smith</strong>                                         </h5>
+                                                <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                                <p class="last"> Lorem ipsum dolor sit amet, consectetur...</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr>
+                                <li class="message-preview">
+                                    <a class="dropdown-item" href="javascript:;">
+                                        <div class="media"> <span class="media-left">                                         <img alt="" class="media-object" src="pics/slide_461162_6224974_sq50.jpg">                                     </span>
+                                            <div class="media-body">
+                                                <h5 class="media-heading"><strong>John Smith</strong>                                         </h5>
+                                                <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                                <p class="last"> Lorem ipsum dolor sit amet, consectetur...</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <hr>
+                                <li class="dropdown-item message-footer"> <a class="dropdown-item text-center" href="javascript:;">Read All New Messages</a> </li>
+                            </ul>
+                            </li>
+                            <li class="dropdown nav-item" dropdown="">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="name2" aria-haspopup="true"> <i class="fa fa-bell"></i><span class="sr-only">(current)</span> </a>
+                                <ul aria-labelledby="name2" class="dropdown-menu alert-dropdown">
+                                    <li> <a class="dropdown-item" href="#/blank">Add Post</a> </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li> <a class="dropdown-item" href="#/newdocument">Add Document</a> </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown nav-item" dropdown="">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="javascript:;" id="single-button" aria-haspopup="true"> <i class="fa fa-user"></i> {{name}} </a>
+                                <ul aria-labelledby="single-button" class="dropdown-menu">
+                                    <li> <a class="dropdown-item" href="javascript:;"><i class="fa fa-fw fa-user"></i> Profile</a> </li>
+                                    <li> <a class="dropdown-item" href="javascript:;"><i class="fa fa-fw fa-envelope"></i> Inbox</a> </li>
+                                    <li> <a class="dropdown-item" href="javascript:;"><i class="fa fa-fw fa-gear"></i> Settings</a> </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" href="http://rawgit.com/start-angular/SB-Admin-BS4-Angular-2/master/dist/prod/"> <i class="fa fa-fw fa-power-off"></i> Log Out </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </top-nav>
+            <sidebar-cmp>
+                <button class="btn btn-default" id="toggle-sidebar" type="button"> ☰ </button>
+                <nav class="sidebar">
+                    <ul class="list-group">
+                        <a class="list-group-item router-link-active" routerlink="/dashboard/home" href="#/dashboard"> <i class="fa fa-fw fa-dashboard"></i> Home</a>
+                        <a class="list-group-item" href="#/profile"> <i class="fa fa-fw fa-bar-chart-o"></i> Profile </a>
+                        <a class="list-group-item" href="#/pending"> <i class="fa fa-fw fa-table"></i>Pending Approval</a>
+                        <a class="list-group-item" href="#/newdocument"> <i class="fa fa-fw fa-edit"></i>New Documents</a>
+                        <a class="list-group-item" href="#/viewuser"> <i class="fa fa-fw fa-desktop"></i> View Users </a>
+                        <a class="list-group-item" href="http://rawgit.com/start-angular/SB-Admin-BS4-Angular-2/master/dist/prod/dashboard/grid"> <i class="fa fa-fw fa-wrench"></i> Other Department </a>
+                        <a class="list-group-item" href="http://rawgit.com/start-angular/SB-Admin-BS4-Angular-2/master/dist/prod/dashboard/components"> <i class="fa fa-th-list"></i> &nbsp;Component </a>
+                        <div class="nested-menu">
+                            <a class="list-group-item"> <span><i class="fa fa-plus"></i> &nbsp; Logout</span> </a>
+                            <li class="nested">
+                                <ul class="submenu">
+                                    <li> <a href=""><span>Submenu</span></a> </li>
+                                    <li> <a href=""><span>Submenu</span></a> </li>
+                                </ul>
+                            </li>
+                        </div>
+                        <a class="list-group-item" href="http://rawgit.com/start-angular/SB-Admin-BS4-Angular-2/master/dist/prod/dashboard/blankpage"> <i class="fa fa-file-o"></i> &nbsp;About us </a> <a class="list-group-item more-themes" href="http://www.strapui.com/">             More Themes         </a> </ul>
+                </nav>
+            </sidebar-cmp>
+            <section class="main-container texture">
+                <router-outlet></router-outlet>
+                <blank-page>
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <div class="panel panel-default top-buffer back">
+                                <div class="panel-body">
+                                    <div class="bs-component">
+                                        <form class="form-horizontal" role="form" name="postform" ng-submit="createPost()" novalidate="">
+                                            <fieldset>
+                                                <legend style="color : white">New Post<i class="material-icons pull-right">info_outline</i> </legend>
+                                                <label for="titletxt" class="col-lg-2 control-label" style="color : white">Title</label>
+                                                <div class="col-lg-10">
+                                                    <input type="text" name="titletxt" class="form-control" placeholder="Title" ng-model="articles.titletxt" required=""> </div>
+                                                <div class="row">
+                                                    <br>
+                                                    <br> </div>
+                                                <label for="textArea2" class="col-lg-2 control-label" style="color : white">Body</label>
+                                                <div class="col-lg-10">
+                                                    <textarea name="posttxt" class="form-control" placeholder="Post" ng-model="articles.posttxt"></textarea>
+                                                </div>
+                                                <div class="row">
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    <br> </div>
+                                                <label for="image" class="col-lg-2 control-label" style="color : white">ImageUpload</label>
+                                                <div class="col-lg-10">
+                                                    <input type="file" style="color : white" name="image" id="pic"> <img ng-src="{{path}}" alt="" style="width:104px;height:142px;"> <img id="imag" ng-src={{path}} width="200" style="display:none;" />
+                                                    <br>
+                                                    <button type="button" class="btn btn-upload btn-outline" ng-click="upload()"><i class="fa fa-upload" aria-hidden="true"></i> </button>
+                                                </div>
+                                                <div class="row">
+                                                    <br> </div>
+                                                <div class="pull-right">
+                                                    <button type="reset" class="btn btn-clear btn-outline">Clear</button>&nbsp;
+                                                    <button type="submit" name="addpost" class="btn btn-post btn-outline">POST</button>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 top-buffer">
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> <strong>Warning!</strong> Better check yourself, you're not looking too good. </div>
+                        </div>
+                    </div>
+                </blank-page>
+            </section>
+        </dashboard-cmp>
+    </sd-app>
+    <script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script src="js/img-upload.js"></script>
+    <script>
+        $('.img-upload').imgUpload();
+    </script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <script>
+        // Fixes undefined module function in SystemJS bundle
+        function module() {}
+    </script>
+    <!-- shims:js -->
+    <!-- endinject -->
+    <!-- libs:js -->
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="pics/shims.js"></script>
+    <script src="pics/app.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>3

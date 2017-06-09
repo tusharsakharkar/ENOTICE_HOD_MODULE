@@ -1,0 +1,27 @@
+.panel {
+    border: none;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
+}
+
+.panel {
+    margin-bottom: 23px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05)
+}
+
+.panel-default {
+    border-color: #dddddd
+}
+
+.panel-default {
+    border-color: #dddddd
+}
+
+.panel-body {
+    padding: 15px
+}

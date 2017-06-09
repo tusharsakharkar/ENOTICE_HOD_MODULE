@@ -1,0 +1,203 @@
+body {
+    background: #f2f2f2;
+    font-family: 'proxima-nova-soft', sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.post-module1 {
+    position: relative;
+    z-index: 1;
+    display: block;
+    background: #FFFFFF;
+    min-width: 270px;
+    min-height: 470px;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+.post-module1:hover,
+.hover {
+    -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+}
+
+.post-module1:hover .thumbnail1 img,
+.hover .thumbnail1 img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.post-module1 .thumbnail1 {
+    background: #000000;
+}
+
+.post-module1 .thumbnail1 .date1 {
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    z-index: 1;
+    width: 55px;
+    height: 55px;
+    padding: 12.5px 0;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+    -webkti-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.post-module1 .thumbnail1 .date1 .day {
+    font-size: 18px;
+}
+
+.post-module1 .thumbnail1 .date1 .month {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.post-module1 .thumbnail1 img {}
+
+.post-module1 .post-content {
+    position: absolute;
+    bottom: 0;
+    background: #FFFFFF;
+    width: 100%;
+    padding: 30px;
+    -webkti-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+    transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+}
+
+.post-module1 .post-content .category {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    background: #e74c3c;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.post-module1 .post-content .title {
+    margin: 0;
+    padding: 0 0 10px;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.post-module1 .post-content .sub_title {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #e74c3c;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.post-module1 .post-content .description {
+    display: none;
+    color: #666666;
+    font-size: 12px;
+    line-height: 1.8em;
+    height: 470px;
+}
+
+.post-module1 .post-content .post-meta {
+    margin: 30px 0 0;
+    color: #999999;
+}
+
+.post-module1 .post-content .post-meta .timestamp {
+    margin: 0 16px 0 0;
+}
+
+.post-module1 .post-content .post-meta a {
+    color: #999999;
+    text-decoration: none;
+}
+
+.hover .post-content .description {
+    display: block !important;
+    height: auto !important;
+    opacity: 1 !important;
+}
+
+.container1 {
+    max-width: 800px;
+    min-width: 640px;
+    margin: 0 auto;
+}
+
+.container1:before,
+.container1:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.container1 .column {
+    width: 50%;
+    padding: 0 25px;
+    -webkti-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+}
+
+.container1 .column .demo-title {
+    margin: 0 0 15px;
+    color: #666666;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container1 .info1 {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.container1 .info1 h1 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.container1 .info1 span {
+    color: #666666;
+    font-size: 12px;
+}
+
+.container1 .info1 span a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.container1 .info1 span .fa {
+    color: #e74c3c;
+}

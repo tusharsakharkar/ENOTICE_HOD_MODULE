@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="EnoticeBoardWebApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="EnoticeBoardWebApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="EnoticeBoardWebApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="EnoticeBoardWebApp" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rusa Enotice-Board</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBzPKX2mUYNRRcRsYwxIEUbuW7hLX-tP_Q"
+            , authDomain: "e-notice-board-83d16.firebaseapp.com"
+            , databaseURL: "https://e-notice-board-83d16.firebaseio.com"
+            , storageBucket: "e-notice-board-83d16.appspot.com"
+            , messagingSenderId: "998245420612"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+    <div ng-view> </div>
+    <script src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="home/home.js"></script>
+    <script type="text/javascript" src="temp/temp.js"></script>
+    <script type="text/javascript" src="loader/loader.js"></script>
+    <script type="text/javascript" src="uploadpic/uploadpic.js"></script>
+    <script type="text/javascript" src="blank/blank.js"></script>
+    <script type="text/javascript" src="newpost/newpost.js"></script>
+    <script type="text/javascript" src="dashboard/dashboard.js"></script>
+    <script type="text/javascript" src="welcome/welcome.js"></script>
+    <script type="text/javascript" src="pending/pending.js"></script>
+    <script type="text/javascript" src="profile/profile.js"></script>
+    <script type="text/javascript" src="viewuser/viewuser.js"></script>
+    <script type="text/javascript" src="addtext/addtext.js"></script>
+    <script type="text/javascript" src="register/register.js"></script>
+    <script type="text/javascript" src="editprofile/editprofile.js"></script>
+    <script type="text/javascript" src="principal/principal.js"></script>
+    <script type="text/javascript" src="otherpdf/otherpdf.js"></script>
+    <script type="text/javascript" src="othertext/othertext.js"></script>
+    <script type="text/javascript" src="newdocument/newdocument.js"></script>
+    <script type="text/javascript" src="viewdocument/viewdocument.js"></script>
+    <script type="text/javascript" src="report/report.js"></script>
+    <script type="text/javascript" src="archive/archive.js"></script>
+    <script type="text/javascript" src="otherdepartment/otherdepartment.js"></script>
+     <script type="text/javascript" src="forgetpassword/forgetpassword.js"></script>
+    <script type="text/javascript" src="pdf/pdf.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>
